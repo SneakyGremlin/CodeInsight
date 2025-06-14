@@ -1,4 +1,4 @@
-# Endeavour
+# CodeInsight
 
 ## The Main README.md
 
@@ -16,7 +16,7 @@
 
 ---
 
-At its core, Endeavour is a code comprehension application targeted towards students in their first year of university without prior programming experience. Users will be asked to give their explanation in plain English to what a provided code snippet does, then code will be generated based on their explanation which is then run against pre-written test cases for the provided code snippet to measure functional equivalence. The student will receive feedback in the form of what Ollama generates and the list of test case that they pass or fail. If the test cases pass, the student will move on to the next code sample, if they don’t then they will either
+At its core, CodeInsight is a code comprehension application targeted towards students in their first year of university without prior programming experience. Users will be asked to give their explanation in plain English to what a provided code snippet does, then code will be generated based on their explanation which is then run against pre-written test cases for the provided code snippet to measure functional equivalence. The student will receive feedback in the form of what Ollama generates and the list of test case that they pass or fail. If the test cases pass, the student will move on to the next code sample, if they don’t then they will either
 
 - keep working on the present problem.
 - ask for a new problem.
@@ -42,7 +42,7 @@ Instructions for Docker Compose.
 
 **VERY IMPORTANT:** Depending on your IDE configuration, the `entrypoint.sh` script may automatically adopt `CRLF` line endings. This is very troublesome: the script _must_ be in `LF` for composition to properly execute. I do take precautions with .gitignore, however.
 
-Ensure you are in the root directory i.e. where the Docker and docker-compose.yml files reside. 
+Ensure you are in the root directory i.e. where the Docker and docker-compose.yml files reside.
 
 The file that I use for this is called docker-compose.yml .
 
@@ -67,3 +67,8 @@ All that needs to be done is that you input into the terminal `docker-compose up
 - docker ctrl+c / terminating the docker containers.
   ✔ Container project-groups-22-lab-d-app-1 Stopped 5.2s
   ✔ Container ollama Stopped 11.6s
+
+## License
+
+This project is licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).  
+You may share and adapt this work non-commercially, as long as you provide appropriate credit.
