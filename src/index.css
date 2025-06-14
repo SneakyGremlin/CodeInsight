@@ -1,0 +1,259 @@
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+/* base */
+* {
+  margin: 0;
+  font-family: "TimesNewRoman";
+  color: #e1d3d3;
+  background-color: #333;
+}
+
+
+/*for NavigationConstantHeader*/
+.navigation-constant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 5px solid gray;
+}
+
+.navigation-constant-header h1, 
+.navigation-constant-header h2 {
+  margin: 0;
+}
+
+.navigation-constant-header h1 a {
+  text-decoration: none;
+}
+
+.logout {
+  background-color: #e0e0e0;
+  color: black;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: not-allowed;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.logout:hover {
+  background-color: gray;
+  border-color: #d0d0d0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
+              0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*-----FunctionAnalysisPage-------*/
+.function-analysis-page {
+  display: flex;
+  padding: 20px;
+  height: calc(100vh - 80px); 
+}
+
+/* Side banner for history */
+.function-analysis-page .side-banner {
+  width: 200px; 
+  background-color: #444;
+  padding: 15px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Main content area */
+.function-analysis-page .main-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+/*container for text boxes*/
+.function-analysis-page .text-box-container {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Non-editable text boxes for generated function display, prompt display, and function display. */
+.function-analysis-page .ollama-text-box {
+  background-color: #555;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  color: #e1d3d3;
+  overflow-y: auto; 
+  max-height: 200px; 
+  height: 200px;
+  width: 100%;
+}
+
+.function-analysis-page .text-box {
+  background-color: #555;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  color: #e1d3d3;
+  overflow-y: auto; 
+  max-height: 200px; 
+  height: 100px;
+  width: 100%;
+}
+
+.function-analysis-page .code-text-box {
+  background-color: #555;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
+  font-size: 14px;
+  color: #e1d3d3;
+  overflow-y: auto; 
+  max-height: 200px; 
+  height: 200px;
+  width: 40%;
+}
+
+.function-analysis-page .code-text-box,
+.function-analysis-page .text-box,
+.function-analysis-page .ollama-text-box:focus{
+  outline: none;
+}
+
+/*bottom part*/
+.function-analysis-page .bottom-container {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Input text box. */
+.function-analysis-page .editable-text-box {
+  background-color: #444;
+  border: 1px solid #777;
+  border-radius: 5px;
+  padding: 10px;
+  resize: none;
+  font-size: 14px;
+  color: #e1d3d3;
+  overflow-y: auto; 
+  height: 150px;
+  max-height: 200px; 
+  margin-top: auto; 
+  width: 80%;
+}
+
+/*Buttons to click on*/
+.function-analysis-page .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.function-analysis-page .buttons .submit-button,
+.function-analysis-page .buttons .reset-button {
+  background-color: #e0e0e0;
+  color: black;
+  border: 2px solid #d0d0d0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1),
+              0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.function-analysis-page .buttons .submit-button:hover,
+.function-analysis-page .buttons .reset-button:hover {
+  background-color: gray;
+  border-color: #d0d0d0;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2),
+              0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/*Test passing status*/
+.function-analysis-page .buttons .status-label {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333; /* Default color */
+}
+
+
+
+
+/*n.a. for now V*/
+
+/*-----FunctionList------*/
+.function-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+
+/*-----FunctionListComponent------*/
+.function-list-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: gray;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.function-list-component .left-section {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.function-list-component .right-section {
+  display: flex;
+  align-items: center;
+}
+
+.function-list-component .right-section > div {
+  margin-left: 10px;
+}
+
+.function-list-component .divider {
+  width: 1px;
+  height: 24px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+

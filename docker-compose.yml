@@ -1,0 +1,21 @@
+# https://www.youtube.com/watch?v=gAkwW2tuIqE  Learn Docker in 7 Easy Steps - Full Beginner's Tutorial
+# https://stackoverflow.com/questions/78500319/how-to-pull-model-automatically-with-container-creation
+
+services:
+  ollama:
+    container_name: ollama
+    image: ollama/ollama:latest
+    ports:
+        - 11434:11434
+    volumes:
+        - ./entrypoint.sh:/entrypoint.sh
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"] #start a terminal and run the script. 
+  app:
+    build: . # Dockerfile in current directory
+    ports: 
+      - "3000:3000"    # Expose port and set port-forwarding
+    environment:  
+      - PORT=3000      # Set environment for running; could be inside Dockerfile directly.
+    depends_on:
+    - ollama # out of circumspection.
+    command: npm start

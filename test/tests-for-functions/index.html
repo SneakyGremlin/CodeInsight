@@ -1,0 +1,38 @@
+<!-- "Inspired from" A1 -->
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Functions (for code comprehension) Mocha Chai Tests</title>
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/mocha/mocha.css" />
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/8.0.1/mocha.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/chai/4.2.0/chai.min.js"></script>
+</head>
+<body>
+	<div id="mocha"></div>
+	
+	<!-- file to test --> 
+	<!-- scripts are in ascending foo order: foo0--foo5 -->
+	<script src="../../src/functions/sumTwoNumbers.js"></script>
+	<script src="../../src/functions/linearSearch.js"></script>
+	<script src="../../src/functions/numberOfEvenNumbers.js"></script>
+	<script src="../../src/functions/multiplyAnArrayOfNumbers.js"></script>
+	<script src="../../src/functions/insertionSortDescending.js"></script>
+	<script src="../../src/functions/returnAllFactorsOfANumber.js"></script>
+	
+	<!-- setup Mocha in Behavior Driven Development (BDD) mode -->
+    <script>
+		mocha.setup('bdd');
+	</script>
+
+	<!-- unit tests, loaded from file -->
+	<script src="test/allFunctions.test.js"></script>
+
+    <!-- run Mocha -->
+    <script>
+		mocha.run();
+    </script>
+	
+</body>
+</html>
