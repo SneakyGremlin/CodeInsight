@@ -1,5 +1,0 @@
-25-6-12 2100 - Fixed the memory error that arose as the Ollama model being used was too complex, and this computer
-has insufficient space.
-25-6-13 1405 - Was able to run the program to success. Note: The model that is used, does play a huge
-part: a lot of a lot was contingent on getting the code produced to be in JavaScript. tinyllama kept
-using Java.
