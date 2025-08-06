@@ -1,5 +1,13 @@
+**Regained access to repository.**
+
 25-6-12 2100 - Fixed the memory error that arose as the Ollama model being used was too complex, and this computer has insufficient space.
 
 25-6-13 1405 - Was able to run a code-snippet to success. Note: The model that is used, does play a huge part: a lot of a lot was contingent on getting the code produced to be in JavaScript. tinyllama kept using Java.
 
 25-6-13 1500 - Was finally able to fully initialize git. Can now proceed with project after revising React and pertinent modules' fundamentals. (Docker will be seen to at the end.)
+
+---
+
+**Recovered from acute illness, completed course obligations (MATH221 and FMST210).**
+
+25-8-5 2100 - Reworded and expanded README.md with regards to Docker. Ensured that Dockerisation is still functional. Re-connected local repository with remote GitHub.

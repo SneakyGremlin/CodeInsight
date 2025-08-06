@@ -4,18 +4,20 @@
 services:
   ollama:
     container_name: ollama
-    image: ollama/ollama:latest
+    image: ollama/ollama:latest # build . not needed as a pre-defined image from Docker is loaded
     ports:
         - 11434:11434
     volumes:
         - ./entrypoint.sh:/entrypoint.sh
-    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"] #start a terminal and run the script. 
+    entrypoint: ["/usr/bin/bash", "/entrypoint.sh"] # start a terminal and run the script; overrides the image's pre-existing routine/script (image pulled above). Is used as container has ONE FIXED JOB.
   app:
-    build: . # Dockerfile in current directory
+    container_name: CodeInsight
+    build: . # Dockerfile in current directory; this signifies that the Image is in the current directory and that is used to build the container.
+    image: sneaky-gremlin/code-insight-image # Name of the image of CodeInsight('s front-end); as build was explicitly included above, this is ONLY a rename. the en
     ports: 
       - "3000:3000"    # Expose port and set port-forwarding
     environment:  
       - PORT=3000      # Set environment for running; could be inside Dockerfile directly.
     depends_on:
     - ollama # out of circumspection.
-    command: npm start
+    command: npm start # script to run for app
