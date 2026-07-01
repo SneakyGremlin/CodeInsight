@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow: /
+# Politely asking all robots to not crawl the website (though as of this moment it is not deployed...)

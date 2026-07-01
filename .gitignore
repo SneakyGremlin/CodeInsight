@@ -1,0 +1,50 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+
+# environment / secrets
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
+Thumbs.db
+Desktop.ini
+ehthumbs.db
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# tooling caches
+.eslintcache
+.npm
+
+# editor / IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# local notes and drafts (not for remote)
+notes_ignore
+DEV-NOTES.md
+EXTENSION-NOTES.md
+README_prev.md
+sundry_instructions.md
+Product Backlog Lab 7 POST.xlsx
+TODO.md
+ANALYSIS.md
+frontend-prev.png

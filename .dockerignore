@@ -1,0 +1,45 @@
+# dependencies and build output (rebuilt inside the image)
+node_modules
+build
+coverage
+
+# version control and CI (not needed in the image)
+.git
+.gitattributes
+.github
+.dockerignore
+
+# environment / secrets
+.env
+.env.*
+
+# logs and caches
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.eslintcache
+.npm
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Docker orchestration (not needed inside the app image)
+Dockerfile
+docker-compose.yml
+
+# local notes, drafts, and course artifacts
+notes_ignore
+DEV-NOTES.md
+EXTENSION-NOTES.md
+README_prev.md
+sundry_instructions.md
+Product Backlog Lab 7 POST.xlsx
+TODO.md
+ANALYSIS.md
+frontend-prev.png
+
+# dev-only: unit-test runner and screenshots not used at runtime
+test

@@ -1,0 +1,1 @@
+Note: I do not distinguish between Integers and Floats. This is intentional and context-appropriate. Also, given the context, I choose to opt for integers for all comprehension purposes, as rounding and truncation are rather advanced concepts.
