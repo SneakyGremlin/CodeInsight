@@ -21,17 +21,18 @@ const ollama = new Ollama({ host: 'http://127.0.0.1:11434' })
  * 
  * @param {string} userPrompt - the prompt provided by the user.
  * 
- * @returns {} // TODO !!!!!!!!!
+ * @returns {} // TODO: add return type
  */
 export const invokeOllamaCodeGeneration = async (userPrompt, snippetID) => {
 
     // The model availed; to be specified in the POST request.
     const modelName = "deepseek-coder";  // There are tradeoffs for the type of model being used: a model too complex can generate code that students cannot understand; a model too simplistic can fail to generate code despite valid input.
     // switched from tinyllama
+    // TODO: checl why this doesn't matter?
 
     // prompt engineering, to ensure consistency.
     const appendix = 
-    "Write the function in JavaScript. Do not include examples, block comments, or in-line comments. Return JUST a single function codeblock.";
+    "Write the function in JavaScript. Do not include examples, block comments, or in-line comments. Return JUST a single function codeblock. Return the function codeblock ONLY, without any other text or comments. Do not attempt to guess the user's intention: give them exactly what they ask for. Refrain from using complex syntax like lambas, maps, etc.";
   
     // The "engineered" (final) prompt to include in POST.
     let finalPrompt = userPrompt + appendix;
@@ -47,10 +48,10 @@ export const invokeOllamaCodeGeneration = async (userPrompt, snippetID) => {
         prompt: finalPrompt,
         stream: false, // for a Single JSON object
         options: { // parameter optimization
-          repeat_last_n: 32, // Sets how far back for the model to look back to prevent repetition. 
-          temperature: 0.6, // The temperature of the model. Increasing the temperature will make the model answer more creatively. [Lower is less.]
-          top_k: 70, // Reduces the probability of generating nonsense. A higher value (e.g. 100) will give more diverse answers, while a lower value (e.g. 10) will be more conservative. 
-          top_p: 0.9 // A higher value (e.g., 0.95) will lead to more diverse text, while a lower value (e.g., 0.5) will generate more focused and conservative text. (Default: 0.9)
+          repeat_last_n: 64, // Sets how far back for the model to look back to prevent repetition. 
+          temperature: 0.2, // The temperature of the model. Increasing the temperature will make the model answer more creatively. [Lower is less.]
+          top_k: 20, // Reduces the probability of generating nonsense. A higher value (e.g. 100) will give more diverse answers, while a lower value (e.g. 10) will be more conservative. 
+          top_p: 0.2 // A higher value (e.g., 0.95) will lead to more diverse text, while a lower value (e.g., 0.5) will generate more focused and conservative text. (Default: 0.9)
         }
       });
 

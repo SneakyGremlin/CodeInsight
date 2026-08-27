@@ -3,7 +3,7 @@ name: Feature / Enhancement
 about: Documents a new feature or improvement
 title: "[Feature / Enhancement]: "
 labels: enhancement
-assignees: ""
+assignees: "SneakyGremlin"
 ---
 
 ## Feature / Enhancement: [short title]

@@ -50,10 +50,6 @@ export function changeFunctionNameToFoo(codeAsString) {
      // Example:
      const arrowFunctionConciseBodyRegex = /(\w+)\s*=\s*\(([^)]*)\)\s*=>\s*([^;]+)/g;
   
-    // Function expressions with single-line body
-    // Example: const increment = function(n) { return n + 1; }
-    const singleLineFunctionExpressionRegex = /(\w+)\s*=\s*function\s*\([^)]*\)\s*{/g;
-    
     // Function declarations with parameters
     // Example: function divide(a, b) { return a / b; }
     const functionDeclarationWithParamsRegex = /function\s+(\w+)\s*\(([^)]*)\)\s*{/g;
@@ -68,13 +64,10 @@ export function changeFunctionNameToFoo(codeAsString) {
   
     // Replace names in function expressions (anonymous functions)
     // Changes: function() { ... } -> function foo() { ... }
-    foo = foo.replace(functionExpressionRegex, 'function foo(');
-  
-    // Replace names in function expressions with parameters
-    // Changes: const increment = function(n) { ... } -> foo = function(n) { ... }
-    foo = foo.replace(singleLineFunctionExpressionRegex, 'foo = function($2) {');
+    foo = foo.replace(functionExpressionRegex, 'function foo() {');
   
     // Replace names in named function expressions
+    // Changes: const increment = function(n) { ... } -> foo = function(n) { ... }
     foo = foo.replace(namedFunctionExpressionRegex, 'foo = function($2) {');
   
     // Replace names in arrow functions with block bodies
