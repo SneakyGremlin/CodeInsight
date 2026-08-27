@@ -1,4 +1,6 @@
-> Last major modification: Aug 27th, 2026 - was done to primarily complete the demo section - will update _fully_ when I get to v0.9.0
+> Last major modification: Aug 27th, 2026 - was done to primarily complete the demo section - will update _fully_ when I get to v0.9.0 
+
+> Please note that this repository is a __public snapshot of a private repository.__ For the purposes of this public version, issues, bugs, and documentation are maintained as though it were a standalone repository.
 
 # CodeInsight
 
