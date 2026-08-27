@@ -1,4 +1,4 @@
-> Last modified: 1 July 2026 - will update next when I get to v0.9.0
+> Last modified: Aug 27th, 2026 - was done to primarily complete the demo section - will update _fully_ when I get to v0.9.0
 
 # CodeInsight
 
@@ -18,7 +18,20 @@ The result is a tight feedback loop: *read → explain → verify* - with zero r
 
 ## Demo
 
-...
+> As mentioned, this is a WIP. As such the demo accurately represents the current state of the repository. 
+
+Below is the Landing Page of the application. It's where you... land.
+![Landing Page](./media/landing_page.png)
+
+Below is what a problem page looks like -- this one is labelled so as to help the viewer and direct attention as appropriate. 
+![Labelled Problem View Page](./media/labelled_problem_view_page.png)
+
+Below is a specific problem page rendered to help make the video easier to understand based on how you're viewing this markdown. 
+![Problem View Page](./media/problem_view_page.png)
+
+Below is a video _briefly_ illustrating how one would interact with the page. First you should see that the furnished plain English explanation was correct (and the code that was produced by the local LLM was also correct, resulting in all the test cases passing). Then you'll see the English being mutated so as to become incorrect, resulting in test cases failing due to the code being generated not being functionally equivalent to the code that had to be evaluated. 
+
+<video src="./media/ascending_descending.mp4" controls width="100%"></video>
 
 ## Key Features
 
