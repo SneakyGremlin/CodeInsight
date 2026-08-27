@@ -1,4 +1,4 @@
-> Last modified: Aug 27th, 2026 - was done to primarily complete the demo section - will update _fully_ when I get to v0.9.0
+> Last major modification: Aug 27th, 2026 - was done to primarily complete the demo section - will update _fully_ when I get to v0.9.0
 
 # CodeInsight
 
@@ -32,6 +32,12 @@ Below is a specific problem page rendered to help make the video easier to under
 Below is a video _briefly_ illustrating how one would interact with the page. First you should see that the furnished plain English explanation was correct (and the code that was produced by the local LLM was also correct, resulting in all the test cases passing). Then you'll see the English being mutated so as to become incorrect, resulting in test cases failing due to the code being generated not being functionally equivalent to the code that had to be evaluated. 
 
 <video src="./media/ascending_descending.mp4" controls width="100%"></video>
+
+> Brief aside: Videos do not natively render in GitHub README.md previews if one uses standard markdown paths due to GitHub security policies. It blocks \<video\> tags referencing relative repository paths. So if you are previewing this on GitHub, you might not see the video. I've linked it below, in that case (you could possibly consider downloading).
+
+[Link to Demonstration](./media/ascending_descending.mp4)
+
+
 
 ## Key Features
 
