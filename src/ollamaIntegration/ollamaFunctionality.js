@@ -26,11 +26,11 @@ const ollama = new Ollama({ host: 'http://127.0.0.1:11434' })
 export const invokeOllamaCodeGeneration = async (userPrompt, snippetID) => {
 
     // The model availed; to be specified in the POST request.
-    const modelName = "deepseek-coder";  // There are tradeoffs for the type of model being used: a model too complex can generate code that students cannot understand; a model too simplistic can fail to generate code despite valid input.
     // switched from tinyllama
-    // TODO: checl why this doesn't matter?
+    // switched from deepseek-coder (1B Q4_0)
+    // to qwen2.5-coder:1.5b 
+    const modelName = "qwen2.5-coder:1.5b";  
 
-    // prompt engineering, to ensure consistency.
     const appendix = 
     "Write the function in JavaScript. Do not include examples, block comments, or in-line comments. Return JUST a single function codeblock. Return the function codeblock ONLY, without any other text or comments. Do not attempt to guess the user's intention: give them exactly what they ask for. Refrain from using complex syntax like lambas, maps, etc.";
   
